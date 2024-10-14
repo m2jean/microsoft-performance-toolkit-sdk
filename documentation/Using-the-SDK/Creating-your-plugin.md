@@ -78,7 +78,7 @@ Please see [Using the SDK/Installing WPA](./Installing-WPA.md) for more informat
 3) For "Launch", select "Executable"
 4) For the "Executable", place the path to the `wpa.exe` that you previously installed as part of the WPT
    * Typically this might be: `C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\wpa.exe`
-5) For "Command line Arguments", add `-nodefault -addsearchdir <bin folder for your plugin>` (e.g. `-nodefault -addsearchdir C:\MyAddIn\bin\Debug\netstandard2.1`)
+5) For "Command line Arguments", add `-nodefault -addsearchdir <bin folder for your plugin>` (e.g. `-nodefault -addsearchdir C:\MyAddIn\bin\Debug\netstandard2.0`)
 
 The above changes will cause Visual Studio to launch your installed WPA with the command line arguments listed above passed in whenever you start debugging your plugin (via `Debug` => `Start Debugging`). The commandline arguments listed above tell WPA to load plugins only from the directory provided.
 
