@@ -20,9 +20,9 @@ To begin, we must create a `SourceParser`. A `SourceParser` parses data from a d
 manipulated by your application. For example, a `SourceParser` may parse an ETW 
 `.etl` file into a stream of `Event` objects.
 
-A source parser will inherit from `SourceParserBase`:
+A source parser will inherit from `SourceParser`:
 ````cs
-public abstract class SourceParserBase<T, TContext, TKey>
+public abstract class SourceParser<T, TContext, TKey>
 {
     ...
 }
@@ -62,7 +62,7 @@ Let's create a `SampleSourceParser` that emits `LineItem` events.
 
 ```cs
 public sealed class SampleSourceParser
-    : SourceParserBase<LineItem, SampleContext, int>
+    : SourceParser<LineItem, SampleContext, int>
 {
     private SampleContext context;
     private IEnumerable<IDataSource> dataSources;
